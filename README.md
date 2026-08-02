@@ -35,6 +35,3 @@ Key Analyses
 - Correlation between price and other listing features
 - Data visualization using charts and graphs
 
-Expected Outcomes
-
-This project demonstrates practical data analytics skills by transforming raw Airbnb data into meaningful insights. It highlights proficiency in data cleaning, exploratory data analysis, visualization, and statistical interpretation using R, making it an excellent portfolio project for aspiring Data Analysts and Data Scientists.
