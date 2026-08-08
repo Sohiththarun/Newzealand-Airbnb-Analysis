@@ -1,2 +1,5 @@
-This week we are going to do analysis the data using KNIME.
-We are looking at Air Bnb
+import pandas as pd
+
+df = pd.read_csv("Oct2025/listings.csv")
+
+df.head()
