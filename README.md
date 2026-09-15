@@ -56,3 +56,24 @@ availability_365                    | The number of days the property is availab
 number_of_reviews_ltm               | The number of reviews the listing has received in the last 12 months
 license                             | The property's registration or licence number.
 
+
+# Deliverable 4
+## Tenancy Services Rental Bond Data
+
+The rental bond dataset was obtained from Tenancy Services and is the **Detailed quarterly report, 2020–2026**. The dataset contains information about rental bonds, dwelling characteristics and rental-price statistics.
+
+| Column                      | Meaning                                                                                                                                                    |
+| --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **TimeFrame**               | The quarter/time period represented by the rental bond data. The value identifies the starting date of the relevant quarterly period.                      |
+| **Location Id**             | A numerical identifier representing the geographic area associated with the rental bond record. The detailed dataset uses geographic location identifiers. |
+| **Dwelling Type**           | The type/category of dwelling associated with the rental bond record. `ALL` represents all dwelling types combined.                                        |
+| **Number Of Beds**          | The number of bedrooms/beds associated with the dwelling. `ALL` represents all bedroom categories combined.                                                |
+| **Total Bonds**             | The total number of rental bonds recorded for the relevant location, dwelling type, bedroom category and timeframe.                                        |
+| **Active Bonds**            | The number of rental bonds that were active for the relevant location, dwelling type, bedroom category and timeframe.                                      |
+| **Closed Bonds**            | The number of rental bonds that were closed for the relevant location, dwelling type, bedroom category and timeframe.                                      |
+| **Median Rent**             | The median weekly rent. This is the middle rental value when the relevant rental values are ordered from lowest to highest.                                |
+| **Geometric Mean Rent**     | The geometric mean of weekly rent values for the relevant group.                                                                                           |
+| **Upper Quartile Rent**     | The upper quartile of weekly rent. It represents the rent value below which approximately 75% of the relevant rental observations fall.                    |
+| **Lower Quartile Rent**     | The lower quartile of weekly rent. It represents the rent value below which approximately 25% of the relevant rental observations fall.                    |
+| **Log Std Dev Weekly Rent** | The logarithmic standard deviation of weekly rent, describing the dispersion/variation of weekly rental values on the log scale.                           |
+
