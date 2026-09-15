@@ -338,7 +338,9 @@ list.files("data/Clean")
 ```
 
 
+### Tenancy Data Cleaning
 
+The tenancy dataset was filtered to match the Airbnb timeframe from October 2025 to April 2026. `"NULL"` values were converted to missing values, and the rent columns were changed to numeric values for analysis. `Number Of Beds` was kept as a categorical variable because it included values such as `"ALL"` and `"5+"`. Rows with missing `Location Id` values were removed because they did not contain useful rent information. However, rows with `Location Id` values of `"-99"` and missing bedroom information were kept because they still contained useful rental and bond data. The final cleaned dataset contained 27,118 rows.
 
 
 
