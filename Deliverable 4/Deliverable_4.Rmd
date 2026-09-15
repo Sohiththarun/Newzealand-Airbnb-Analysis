@@ -154,6 +154,189 @@ The `license` column was removed because every value in this column was missing.
 After cleaning, the dataset contained 18,110 rows and 18 columns. The cleaned dataset was saved as `christchurch_clean.csv` in the `data/cleaned` folder.
 
 
+## Tenancy Services Rental Bond Data
+
+
+```{r tenancy-import}
+
+library(tidyverse)
+
+tenancy_data <- read_csv(
+  "data/tenancy_raw/Detailed-Quarterly-Tenancy-Q1-2020-Q3-2026.csv",
+  show_col_types = FALSE
+)
+```
+
+```{r}
+dim(tenancy_data)
+```
+```{r tenancy-columns}
+names(tenancy_data)
+```
+```{r}
+unique(tenancy_data$TimeFrame)
+```
+```{r}
+tenancy_data <- tenancy_data %>%
+  mutate(TimeFrame = as.Date(TimeFrame))
+```
+
+```{r}
+sort(unique(tenancy_data$TimeFrame))
+```
+```{r}
+tenancy_filtered <- tenancy_data %>%
+  filter(
+    TimeFrame >= as.Date("2025-10-01"),
+    TimeFrame <= as.Date("2026-04-01")
+  )
+```
+
+```{r}
+dim(tenancy_filtered)
+```
+```{r}
+sort(unique(tenancy_filtered$TimeFrame))
+```
+```{r}
+head(tenancy_filtered)
+```
+```{r}
+glimpse(tenancy_filtered)
+```
+
+```{r}
+tenancy_clean <- tenancy_filtered %>%
+  mutate(
+    across(
+      c(
+        `Median Rent`,
+        `Geometric Mean Rent`,
+        `Upper Quartile Rent`,
+        `Lower Quartile Rent`,
+        `Log Std Dev Weekly Rent`
+      ),
+      ~ na_if(.x, "NULL")
+    ),
+    `Number Of Beds` = na_if(`Number Of Beds`, "NULL"),
+    `Location Id` = na_if(`Location Id`, "NULL")
+  )
+```
+
+```{r}
+unique(tenancy_filtered$`Number Of Beds`)
+```
+```{r}
+sum(is.na(tenancy_clean$`Number Of Beds`))
+```
+```{r}
+tenancy_clean <- tenancy_filtered %>%
+  mutate(
+    across(
+      c(
+        `Median Rent`,
+        `Geometric Mean Rent`,
+        `Upper Quartile Rent`,
+        `Lower Quartile Rent`,
+        `Log Std Dev Weekly Rent`
+      ),
+      ~ na_if(.x, "NULL")
+    ),
+    `Number Of Beds` = na_if(`Number Of Beds`, "NULL"),
+    `Location Id` = na_if(`Location Id`, "NULL")
+  ) %>%
+  mutate(
+    `Median Rent` = as.numeric(`Median Rent`),
+    `Geometric Mean Rent` = as.numeric(`Geometric Mean Rent`),
+    `Upper Quartile Rent` = as.numeric(`Upper Quartile Rent`),
+    `Lower Quartile Rent` = as.numeric(`Lower Quartile Rent`),
+    `Log Std Dev Weekly Rent` = as.numeric(`Log Std Dev Weekly Rent`),
+    `Number Of Beds` = factor(
+      `Number Of Beds`,
+      levels = c("0", "1", "2", "3", "4", "5", "5+", "6", "7", "9", "ALL")
+    )
+  )
+```
+
+```{r}
+glimpse(tenancy_clean)
+```
+```{r}
+colSums(is.na(tenancy_clean))
+```
+```{r}
+unique(tenancy_clean$`Location Id`)[1:30]
+```
+
+```{r}
+tenancy_clean %>%
+  count(`Location Id`, sort = TRUE) %>%
+  head(15)
+```
+```{r}
+tenancy_clean %>%
+  filter(is.na(`Location Id`) | `Location Id` == "-99") %>%
+  select(TimeFrame, `Location Id`, `Dwelling Type`, `Number Of Beds`,
+         `Total Bonds`, `Median Rent`) %>%
+  head(20)
+```
+```{r}
+tenancy_clean %>%
+  filter(is.na(`Location Id`) | `Location Id` == "-99") %>%
+  count(`Location Id`, `Number Of Beds`, `Dwelling Type`)
+```
+```{r}
+tenancy_clean %>%
+  filter(is.na(`Location Id`)) %>%
+  select(
+    TimeFrame,
+    `Location Id`,
+    `Dwelling Type`,
+    `Number Of Beds`,
+    `Total Bonds`,
+    `Median Rent`
+  ) %>%
+  head(20)
+```
+```{r}
+tenancy_clean <- tenancy_clean %>%
+  filter(!is.na(`Location Id`))
+```
+
+```{r}
+dim(tenancy_clean)
+```
+Rows with missing location IDs were removed because they had no median rent values. Rows with a location ID of -99 were retained because they contained valid bond and rent information.
+
+```{r}
+colSums(is.na(tenancy_clean))
+```
+```{r}
+tenancy_clean %>%
+  filter(is.na(`Number Of Beds`)) %>%
+  select(
+    TimeFrame,
+    `Location Id`,
+    `Dwelling Type`,
+    `Number Of Beds`,
+    `Total Bonds`,
+    `Median Rent`
+  ) %>%
+  head(20)
+```
+Missing values in Number Of Beds were retained because the rows still contained valid location, dwelling type, bond, and rent information. Removing them would result in a loss of useful rental data.
+
+```{r}
+write_csv(
+  tenancy_clean,
+  "data/Clean/tenancy_clean.csv"
+)
+```
+
+```{r}
+list.files("data/Clean")
+```
+
 
 
 
