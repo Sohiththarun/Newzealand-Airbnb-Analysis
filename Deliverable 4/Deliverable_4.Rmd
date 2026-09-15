@@ -1,0 +1,161 @@
+---
+title: "Data 201 Deliverable 4"
+author: "Anibal"
+date: "2026-09-15"
+output: html_document
+---
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+library(tidyverse)
+
+files <- list.files(
+  path = "data/raw",
+  pattern = "\\.csv$",
+  full.names = TRUE)
+
+
+airbnb_data <- map_dfr(files, function(file) {
+ data <- read_csv(file, show_col_types = FALSE)
+  data$month_year <- tools::file_path_sans_ext(basename(file))
+
+  data
+})
+```
+
+```{r}
+nrow(airbnb_data)
+```
+```{r}
+names(airbnb_data)
+```
+```{r}
+christchurch_data <- airbnb_data %>%
+  filter(neighbourhood_group == "Christchurch City")
+```
+
+```{r}
+table(christchurch_data$month_year)
+```
+```{r}
+colSums(is.na(christchurch_data))
+```
+```{r}
+sum(duplicated(christchurch_data))
+```
+```{r}
+summary(christchurch_data)
+```
+```{r}
+christchurch_data %>%
+  summarise(
+    missing_price = sum(is.na(price)),
+    missing_minimum_nights = sum(is.na(minimum_nights)),
+    missing_last_review = sum(is.na(last_review)),
+    missing_reviews_per_month = sum(is.na(reviews_per_month)),
+    missing_license = sum(is.na(license))
+  )
+```
+```{r}
+summary(christchurch_data$price)
+```
+```{r}
+table(christchurch_data$room_type)
+```
+```{r}
+christchurch_data %>%
+  filter(price > 1000) %>%
+  select(id, name, price, room_type, neighbourhood) %>%
+  arrange(desc(price))
+```
+```{r}
+christchurch_data %>%
+  filter(price <= 0) %>%
+  select(id, name, price, room_type)
+```
+```{r}
+quantile(
+  christchurch_data$price,
+  probs = c(0, 0.25, 0.5, 0.75, 0.9, 0.95, 0.99, 1),
+  na.rm = TRUE
+)
+```
+```{r}
+christchurch_data %>%
+  filter(price > 1000) %>%
+  count(price, sort = TRUE)
+```
+```{r}
+christchurch_data %>%
+  filter(price > 1000) %>%
+  summarise(
+    number_of_listings = n(),
+    lowest_high_price = min(price, na.rm = TRUE),
+    highest_price = max(price, na.rm = TRUE),
+    median_high_price = median(price, na.rm = TRUE)
+  )
+```
+```{r}
+christchurch_data %>%
+  filter(price > 1000) %>%
+  count(price, sort = TRUE) %>%
+  slice_head(n = 15)
+```
+```{r}
+christchurch_clean <- christchurch_data %>%
+  filter(!is.na(price), price <= 10000)
+```
+
+```{r}
+christchurch_clean <- christchurch_clean %>%
+  select(-license)
+```
+
+```{r}
+christchurch_clean %>%
+  summarise(
+    invalid_minimum_nights = sum(minimum_nights <= 0, na.rm = TRUE),
+    invalid_availability = sum(availability_365 < 0 | availability_365 > 365, na.rm = TRUE),
+    invalid_latitude = sum(latitude < -90 | latitude > 90, na.rm = TRUE),
+    invalid_longitude = sum(longitude < -180 | longitude > 180, na.rm = TRUE),
+    invalid_reviews = sum(number_of_reviews < 0, na.rm = TRUE),
+    invalid_review_rate = sum(reviews_per_month < 0, na.rm = TRUE)
+  )
+```
+```{r}
+christchurch_clean <- christchurch_clean %>%
+  filter(!is.na(minimum_nights))
+```
+```{r}
+colSums(is.na(christchurch_clean))
+```
+```{r}
+dim(christchurch_clean)
+```
+
+```{r}
+write_csv(
+  christchurch_clean,
+  "data/clean/christchurch_clean.csv"
+)
+```
+
+Airbnb Data Cleaning
+
+The nine monthly Airbnb datasets from October 2025 to June 2026 were combined into one dataset. The data was then filtered to only include listings from Christchurch City. A `month_year` column was added so the listings could be compared across the different months. The original Christchurch dataset contained 28,795 rows and 19 columns.
+
+The data was then cleaned by removing listings with missing prices, as price is needed to compare rental costs. Listings with prices above $10,000 were also removed because some of the extreme prices did not match the actual prices found online and appeared to be data errors. The $10,000 cutoff was chosen to remove obvious errors while still keeping potentially legitimate high-priced properties. Rows with missing `minimum_nights` were removed because this variable may be useful for future analysis.
+
+The `license` column was removed because every value in this column was missing. No duplicate rows were found. Missing values in `last_review` and `reviews_per_month` were kept because these may represent listings that have not received any reviews. Removing these listings would reduce the dataset unnecessarily. Latitude and longitude were kept because they may be useful for future location-based analysis.
+
+After cleaning, the dataset contained 18,110 rows and 18 columns. The cleaned dataset was saved as `christchurch_clean.csv` in the `data/cleaned` folder.
+
+
+
+
+
+
+
