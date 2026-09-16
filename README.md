@@ -36,8 +36,8 @@ Key Analyses
 - Data visualization using charts and graphs
 
 Meaning of key columns:
-
-Column                              | Meaning
+| Column                            | Meaning                                                                                                   |
+| ----------------------------------| --------------------------------------------------------------------------------------------------------- |
 id                                  | A unique identifier assigned to each Airbnb listing.
 host_id                             | The title or name of the Airbnb listing as shown on the Airbnb website.
 host_name                           | A unique identifier assigned to the host of the listing.
