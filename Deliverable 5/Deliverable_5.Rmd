@@ -1,0 +1,411 @@
+---
+title: "Deliverable 5"
+author: "Anibal"
+date: "2026-09-17"
+output: html_document
+---
+```{r}
+library(tidyverse)
+library(jsonlite)
+library(httr)
+library(parallel)
+```
+
+
+```{r}
+christchurch_clean <- read_csv(
+  "data/clean/christchurch_clean.csv",
+  show_col_types = FALSE
+)
+
+tenancy_clean <- read_csv(
+  "data/clean/tenancy_clean.csv",
+  show_col_types = FALSE
+)
+```
+
+```{r}
+names(christchurch_clean)
+```
+```{r}
+names(tenancy_clean)
+```
+
+```{r}
+christchurch_clean %>%
+  select(latitude, longitude) %>%
+  drop_na() %>%
+  slice(1)
+```
+
+```{r}
+.api_key <- '97cfd31039bc471789e523737d341432'
+```
+
+
+```{r}
+
+coords <- christchurch_clean %>%
+  select(latitude, longitude) %>%
+  drop_na() 
+```
+```{r}
+nrow(coords)
+```
+
+```{r}
+get_area_code_parallel <- function(coords) {
+  
+  url <- paste0(
+    "https://koordinates.com/services/query/v1/vector.json",
+    "?key=", .api_key,
+    "&layer=123515",
+    "&x=", coords$longitude,
+    "&y=", coords$latitude,
+    "&radius=10000"
+  )
+  
+  for (i in 1:3) {
+    
+    result <- tryCatch({
+      
+      response <- fromJSON(url, simplifyVector = FALSE)
+      
+      features <- response$vectorQuery$layers[["123515"]]$features
+      
+      if (length(features) == 0) {
+        return(NA_character_)
+      }
+      
+      features[[1]]$properties$SA22026_V1_00
+      
+    }, error = function(e) {
+      NULL
+    })
+    
+    if (!is.null(result)) {
+      return(result)
+    }
+    
+    Sys.sleep(1)
+  }
+  
+  NA_character_
+}
+```
+
+```{r}
+cl <- makeCluster(8)
+
+clusterExport(cl, c("get_area_code_parallel", ".api_key"))
+clusterEvalQ(cl, library(jsonlite))
+
+area_codes <- parLapply(
+  cl,
+  split(coords, seq_len(nrow(coords))),
+  get_area_code_parallel
+)
+
+stopCluster(cl)
+
+area_codes <- unlist(area_codes)
+```
+```{r}
+length(area_codes)
+```
+```{r}
+sum(is.na(area_codes))
+```
+```{r}
+head(area_codes)
+```
+```{r}
+christchurch_clean$area_code <- area_codes
+```
+
+```{r}
+christchurch_clean %>%
+  select(latitude, longitude, area_code) %>%
+  slice(1:10)
+```
+```{r}
+write_csv(
+  christchurch_clean,
+  "data/clean/christchurch_clean_area_codes.csv"
+)
+```
+
+```{r}
+file.exists("data/clean/christchurch_clean_area_codes.csv")
+```
+
+```{r}
+names(tenancy_clean)
+```
+
+```{r}
+head(tenancy_clean$`Location Id`)
+```
+```{r}
+head(christchurch_clean$month_year)
+```
+
+```{r}
+head(tenancy_clean$TimeFrame)
+```
+```{r}
+tenancy_clean <- tenancy_clean %>%
+  mutate(
+    month_year = format(as.Date(TimeFrame), "%B_%Y")
+  )
+```
+
+```{r}
+head(tenancy_clean$month_year)
+```
+
+```{r}
+tenancy_clean <- tenancy_clean %>%
+  mutate(area_code = as.character(`Location Id`))
+```
+
+
+```{r}
+tenancy_clean %>%
+  count(area_code, month_year) %>%
+  filter(n > 1) %>%
+  slice_head(n = 10)
+```
+```{r}
+tenancy_clean %>%
+  filter(
+    area_code == "100100",
+    month_year == "April_2026"
+  ) %>%
+  select(
+    area_code,
+    month_year,
+    `Dwelling Type`,
+    `Number Of Beds`,
+    `Median Rent`
+  )
+```
+```{r}
+tenancy_join <- tenancy_clean %>%
+  filter(
+    `Dwelling Type` == "ALL",
+    `Number Of Beds` == "ALL"
+  )
+```
+
+```{r}
+tenancy_join %>%
+  count(area_code, month_year) %>%
+  filter(n > 1)
+```
+
+```{r}
+christchurch_joined <- christchurch_clean %>%
+  left_join(
+    tenancy_join,
+    by = c("area_code", "month_year")
+  )
+```
+
+```{r}
+nrow(christchurch_joined)
+```
+```{r}
+christchurch_joined %>%
+  filter(area_code == "326600") %>%
+  summarise(
+    median_airbnb_price = median(price, na.rm = TRUE),
+    number_of_airbnbs = n()
+  )
+```
+
+Median Price for an AirBnB in Christchurch Central (326600) is $240 and there are 715 AirBnbs in Christchurch Central.
+
+```{r}
+christchurch_joined <- christchurch_joined %>%
+  mutate(
+    long_term_price_per_night = `Median Rent` / 7,
+    price_difference = price - long_term_price_per_night
+  )
+```
+
+```{r}
+christchurch_joined %>%
+  group_by(area_code) %>%
+  summarise(
+    median_gap = median(price_difference, na.rm = TRUE),
+    number_of_airbnbs = n()
+  ) %>%
+  arrange(desc(median_gap)) %>%
+  slice_head(n = 10)
+```
+
+```{r}
+christchurch_joined %>%
+  filter(area_code %in% c("322800", "328800", "332700", "322300", "317400")) %>%
+  group_by(area_code) %>%
+  summarise(
+    median_gap = median(price_difference, na.rm = TRUE),
+    number_of_airbnbs = n()
+  )
+```
+```{r}
+christchurch_joined %>%
+  filter(area_code %in% c("317400", "322300", "322800", "328800", "332700")) %>%
+  group_by(area_code) %>%
+  summarise(
+    median_gap = median(price_difference, na.rm = TRUE),
+    number_of_airbnbs = n()
+  ) %>%
+  arrange(desc(median_gap))
+```
+
+```{r}
+christchurch_joined %>%
+  filter(area_code %in% c("317400", "322300", "322800", "328800", "332700")) %>%
+  select(area_code, neighbourhood) %>%
+  distinct() %>%
+  arrange(area_code)
+```
+
+```{r}
+area_names <- christchurch_joined %>%
+  filter(area_code %in% c("317400", "322300", "322800", "328800", "332700")) %>%
+  group_by(area_code) %>%
+  slice(1) %>%
+  ungroup() %>%
+  mutate(
+    area_name = map2_chr(
+      latitude,
+      longitude,
+      function(lat, lon) {
+        url <- paste0(
+          "https://koordinates.com/services/query/v1/vector.json",
+          "?key=", .api_key,
+          "&layer=123515",
+          "&x=", lon,
+          "&y=", lat,
+          "&radius=10000"
+        )
+        
+        response <- fromJSON(url, simplifyVector = FALSE)
+        
+        response$vectorQuery$layers[["123515"]]$features[[1]]$properties$SA22026_V1_00_NAME
+      }
+    )
+  ) %>%
+  select(area_code, area_name) %>%
+  distinct()
+```
+
+```{r}
+area_names
+```
+```{r, fig.width= 15, fig.height = 12}
+top_gap_areas <- christchurch_joined %>%
+  filter(!is.na(price_difference)) %>%
+  group_by(area_code) %>%
+  summarise(
+    median_gap = median(price_difference),
+    number_of_airbnbs = n()
+  ) %>%
+  filter(number_of_airbnbs >= 10) %>%
+  arrange(desc(median_gap)) %>%
+  slice_head(n = 10)
+```
+
+```{r}
+christchurch_joined %>%
+  filter(area_code %in% top_gap_areas$area_code) %>%
+  ggplot(aes(x = factor(area_code), y = price_difference)) +
+  geom_boxplot() +
+  labs(
+    title = "Airbnb versus long-term rental price gaps",
+    x = "Area code",
+    y = "Price difference per night ($)"
+  )
+```
+```{r}
+top_gap_areas
+```
+The largest typical gap between short-term Airbnb and long-term rental prices was observed in Sumner (SA2 332700), where the median difference was approximately $197.43 per night, based on AirBnB prices minus the median long-term weekly rent converted to a nightly rate.
+
+```{r}
+tenancy_join %>%
+  select(
+    area_code,
+    month_year,
+    `Total Bonds`
+  ) %>%
+  head(10)
+```
+
+```{r}
+location_comparison <- christchurch_joined %>%
+  filter(month_year == "April_2026") %>%
+  group_by(area_code) %>%
+  summarise(
+    airbnb_count = n(),
+    rental_properties = first(`Total Bonds`)
+  )
+```
+
+```{r}
+location_comparison %>%
+  arrange(desc(airbnb_count)) %>%
+  head(10)
+```
+
+```{r}
+location_comparison_clean <- location_comparison %>%
+  filter(!is.na(rental_properties))
+```
+
+```{r}
+location_comparison_clean %>%
+  arrange(desc(airbnb_count)) %>%
+  head(10)
+```
+
+```{r}
+location_comparison_clean %>%
+  arrange(desc(airbnb_count)) %>%
+  slice_head(n = 10) %>%
+  pivot_longer(
+    cols = c(airbnb_count, rental_properties),
+    names_to = "property_type",
+    values_to = "count"
+  ) %>%
+  ggplot(aes(x = reorder(area_code, count), y = count, fill = property_type)) +
+  geom_col(position = "dodge") +
+  coord_flip() +
+  labs(
+    title = "Airbnb and Rental Properties by Area",
+    x = "Area code",
+    y = "Number of properties",
+    fill = "Property type"
+  )
+```
+The key comparison is visible:
+
+327000: 318 Airbnb vs 141 rentals
+327100: 246 vs 42
+325800: 168 vs 105
+326600: 138 vs 6
+325700: 126 vs 54
+
+
+```{r}
+file.exists("data/clean/christchurch_clean_area_codes.csv")
+```
+
+
+
+
+
+
