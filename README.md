@@ -35,26 +35,29 @@ Key Analyses
 - Correlation between price and other listing features
 - Data visualization using charts and graphs
 
-Meaning of key columns:
-| Column                            | Meaning                                                                                                   |
-| ----------------------------------| --------------------------------------------------------------------------------------------------------- |
-id                                  | A unique identifier assigned to each Airbnb listing.
-host_id                             | The title or name of the Airbnb listing as shown on the Airbnb website.
-host_name                           | A unique identifier assigned to the host of the listing.
-neighbourhood_group                 | The first name of the Airbnb host.
-neighbourhood                       | The larger administrative region or grouping of neighbourhoods where the property is located.
-latitude                            | The suburb, city, or local area in which the property is located.
-longitude                           | The property's latitude coordinate, used to identify its north-south position on the Earth's surface.
-room_type                           | The property's longitude coordinate, used to identify its east-west position on the Earth's surface.
-price                               | The type of accommodation offered.
-minimum_nights                      | The advertised nightly rental price of the listing.
-number_of_reviews                   | The minimum number of nights a guest must book to stay at the property.
-last_review                         | The total number of reviews the listing has received from guests.
-reviews_per_month                   | The date on which the listing most recently received a guest review.
-calculated_host_listings_count      | The average number of reviews the listing receives each month.
-availability_365                    | The number of days the property is available for booking over the next 365 days.
-number_of_reviews_ltm               | The number of reviews the listing has received in the last 12 months
-license                             | The property's registration or licence number.
+
+## Meaning of Key Airbnb Columns
+
+| Column                           | Meaning 
+|----------------------------------|------------------------------------------------------------------------------|
+| `id`                             | A unique identifier assigned to each Airbnb listing. |
+| `host_id`                        | A unique identifier assigned to the host of the listing. |
+| `host_name`                      | The name of the Airbnb host. |
+| `neighbourhood_group`            | A larger geographical or administrative grouping associated with the listing. |
+| `neighbourhood`                  | The suburb, city, or local area in which the property is located. |
+| `latitude`                       | The latitude coordinate of the property. |
+| `longitude`                      | The longitude coordinate of the property. |
+| `room_type`                      | The type of accommodation offered by the listing. |
+| `price`                          | The advertised nightly rental price of the listing. |
+| `minimum_nights`                 | The minimum number of nights a guest must book to stay at the property. |
+| `number_of_reviews`              | The total number of reviews received by the listing. |
+| `last_review`                    | The date on which the listing most recently received a guest review. |
+| `reviews_per_month`              | The average number of reviews received by the listing per month. |
+| `calculated_host_listings_count` | The number of listings associated with the host. |
+| `availability_365`               | The number of days the property is available for booking over the next 365 days. |
+| `number_of_reviews_ltm`          | The number of reviews received by the listing during the last 12 months. |
+| `license`                        | The property's registration or licence number, where provided. |
+
 
 ## Tenancy Services Rental Bond Dataset
 
@@ -70,23 +73,34 @@ The data is organised by tenancy start date and uses the **SA2-2019 geographic a
 
 ### Dataset Columns
 
-| Column                    | Meaning                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------- |
-| `TimeFrame`               | The quarter or time period in which the tenancy began.                                                    |
-| `Location Id`             | The geographic area identifier for the location of the tenancy.                                           |
-| `Dwelling Type`           | The type of rental property, such as a house, apartment, flat, or room.                                   |
-| `Number Of Beds`          | The number of bedrooms in the rental property.                                                            |
-| `Total Bonds`             | The total number of rental bonds recorded for the selected time period and location.                      |
-| `Active Bonds`            | The number of bonds that were still active for the selected time period and location.                     |
-| `Closed Bonds`            | The number of bonds that had been closed for the selected time period and location.                       |
-| `Median Rent`             | The median weekly rent. Half of the recorded rents are below this value and half are above it.            |
-| `Geometric Mean Rent`     | The geometric mean weekly rent, calculated by multiplying the rent values and taking the nth root.        |
-| `Upper Quartile Rent`     | The 75th percentile of weekly rent. Approximately 25% of recorded rents are higher than this value.       |
-| `Lower Quartile Rent`     | The 25th percentile of weekly rent. Approximately 25% of recorded rents are lower than this value.        |
+| Column                    | Meaning 
+|---------------------------|------------------------------------------------------------------------------------------------------|
+| `TimeFrame`               | The quarter or time period in which the tenancy began. |
+| `Location Id`             | The geographic area identifier for the location of the tenancy. |
+| `Dwelling Type`           | The type of rental property, such as a house, apartment, flat, or room. |
+| `Number Of Beds`          | The number of bedrooms in the rental property. |
+| `Total Bonds`             | The total number of rental bonds recorded for the selected time period and location. |
+| `Active Bonds`            | The number of bonds that were still active for the selected time period and location. |
+| `Closed Bonds`            | The number of bonds that had been closed for the selected time period and location. |
+| `Median Rent`             | The median weekly rent. Half of the recorded rents are below this value and half are above it. |
+| `Geometric Mean Rent`     | The geometric mean weekly rent, calculated from the recorded rental values. |
+| `Upper Quartile Rent`     | The 75th percentile of weekly rent. Approximately 25% of recorded rents are higher than this value. |
+| `Lower Quartile Rent`     | The 25th percentile of weekly rent. Approximately 25% of recorded rents are lower than this value. |
 | `Log Std Dev Weekly Rent` | The standard deviation of the logarithm of weekly rent, showing the spread or variation of rental prices. |
 
 ### Important Data Limitations
 
-The dataset represents private rental bonds lodged with Tenancy Services, not every rental property in New Zealand. The rent values relate to newly acquired rentals where bonds were lodged.
+The dataset represents private rental bonds lodged with Tenancy Services and does not represent every rental property in New Zealand.
 
-The data may contain rounding or suppressed values to protect privacy. Recent figures may also be incomplete or revised because bonds can take time to be lodged and processed. Therefore, comparisons between recent and older periods should be made carefully.
+The rent values relate to newly acquired rentals where bonds were lodged.
+
+The data may contain rounding or suppressed values to protect privacy. Recent figures may be provisional or subject to revision as additional bond information is recorded and processed.
+
+Therefore, comparisons between recent and older periods should be made carefully, particularly where recent data may be incomplete or provisional.
+
+
+
+
+
+
+
