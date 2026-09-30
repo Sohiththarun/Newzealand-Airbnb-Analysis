@@ -399,13 +399,50 @@ The key comparison is visible:
 326600: 138 vs 6
 325700: 126 vs 54
 
+# Week 9 – Coding Practices Review
+
+# Review of code organisation, readability, reuse, and validation.
+
+# Sanity check: number of rows after joining
 
 ```{r}
-file.exists("data/clean/christchurch_clean_area_codes.csv")
+nrow(christchurch_joined)
+# The joined dataset contains 18,110 rows, so the row count can be checked after the join.
 ```
 
 
 
+```{r}
+# Check for missing values in important joined columns
+christchurch_joined %>%
+  summarise(
+    missing_area_code = sum(is.na(area_code)),
+    missing_price = sum(is.na(price)),
+    missing_median_rent = sum(is.na(`Median Rent`))
+  )
+```
 
 
+```{r}
+sum(is.na(christchurch_joined$`Median Rent`))
+```
+```{r}
+# The sanity check confirms that the joined dataset has 18,110 rows.
+# There are no missing area codes, while 13,657 rows have missing price
+# and 13,657 rows have missing Median Rent values. These missing values
+# should be considered when interpreting the joined analysis.
+```
+
+```{r}
+# Changes Made for Week 9
+
+# 1. Improved code organisation by grouping the workflow into clear stages.
+
+# 2. Kept variable names descriptive so that the purpose of each dataset is clear.
+
+# 3. Added validation checks to confirm that important transformations produced expected outputs.
+
+# 4. Added a sanity check after the dataset join to identify missing values and confirm the row count.
+
+```
 

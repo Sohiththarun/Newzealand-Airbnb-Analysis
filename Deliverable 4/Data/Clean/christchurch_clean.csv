@@ -6,7 +6,7 @@ id,name,host_id,host_name,neighbourhood_group,neighbourhood,latitude,longitude,r
 1097487,Heritage Magic in Merivale,4993285,Paulette,Christchurch City,Fendalton Ward,-43.51149,172.6254,Private room,189,1,230,2025-03-03,2.05,1,295,0,April_2026
 1429281,Self contained & fully equipped,7619275,Liz & Gordon,Christchurch City,Halswell Ward,-43.56982,172.55229,Private room,69,5,205,2026-04-19,1.33,1,309,23,April_2026
 1461771,Mt Pleasant - Retro Living apartment,6353005,Suzanne,Christchurch City,Heathcote Ward,-43.55813,172.72025,Entire home/apt,337,3,16,2024-06-03,0.11,1,45,0,April_2026
-1798383,"3 private rooms up to 6 guests, spacious modern.",9431529,Shirley,Christchurch City,Burwood Ward,-43.46900177001953,172.66433715820312,Private room,166,2,181,2026-02-21,1.19,2,344,11,April_2026
+1798383,"3 private rooms up to 6 guests, spacious modern.",9431529,Shirley,Christchurch City,Burwood Ward,-43.46900177001953,172.66433715820313,Private room,166,2,181,2026-02-21,1.19,2,344,11,April_2026
 1837611,"Close to University, 10 mins from Airport and City",9542449,Shona,Christchurch City,Fendalton Ward,-43.51332,172.5784,Private room,86,2,98,2026-02-17,0.65,1,198,15,April_2026
 1893596,"Luxury at its best, Quail's Nest",5225682,Shelley,Christchurch City,Banks Peninsula Ward,-43.62728,172.71872,Entire home/apt,223,2,196,2026-02-27,1.29,1,193,6,April_2026
 2009003,Luxury Cass Bay Retreat (B),10339399,Vivienne,Christchurch City,Banks Peninsula Ward,-43.60411,172.69502,Entire home/apt,206,1,454,2026-04-19,3.05,3,331,54,April_2026
@@ -39,7 +39,7 @@ id,name,host_id,host_name,neighbourhood_group,neighbourhood,latitude,longitude,r
 5511177,"Port Levy, Amazing Views Christchurch",11225678,Verity,Christchurch City,Banks Peninsula Ward,-43.64815,172.8192,Entire home/apt,628,1,177,2025-01-28,1.39,1,363,0,April_2026
 5738538,Akaroa Coastal Studio,26183903,Jenny & John,Christchurch City,Banks Peninsula Ward,-43.82883,172.94328,Private room,189,1,710,2026-04-08,5.38,1,324,76,April_2026
 5739354,Modern self contained unit,29133056,Nadia,Christchurch City,Banks Peninsula Ward,-43.59799,172.71911,Private room,309,1,8,2026-02-28,0.3,1,269,6,April_2026
-5752166,Chic Private Studio 6mins from Airport & shops/bus,28774099,Liz,Christchurch City,Harewood Ward,-43.48641586303711,172.58523559570312,Entire home/apt,133,1,531,2026-04-13,10.08,3,284,42,April_2026
+5752166,Chic Private Studio 6mins from Airport & shops/bus,28774099,Liz,Christchurch City,Harewood Ward,-43.48641586303711,172.58523559570313,Entire home/apt,133,1,531,2026-04-13,10.08,3,284,42,April_2026
 5787709,The Velvet Suite,21073822,Sue And Greg,Christchurch City,Harewood Ward,-43.47665,172.56715,Entire home/apt,325,1,28,2026-02-06,0.21,2,257,4,April_2026
 5936861,Your own Eco friendly bedroom + lounge unit,30825105,Shaun And Vanessa,Christchurch City,Banks Peninsula Ward,-43.76285,172.80538,Entire home/apt,172,1,403,2026-04-12,3.16,2,231,37,April_2026
 6111519,"Close to airport, quiet double bedroom upstairs",13171208,Ellis,Christchurch City,Harewood Ward,-43.48177,172.58516,Private room,75,2,20,2026-02-27,0.15,2,153,11,April_2026
@@ -160,7 +160,7 @@ With Parking",56932783,Pam,Christchurch City,Central Ward,-43.5271,172.64739,Pri
 16578589,Garden Studio with ocean views,12516114,Kaye,Christchurch City,Heathcote Ward,-43.57302,172.7554,Entire home/apt,172,2,247,2026-03-14,2.18,1,131,23,April_2026
 16586520,"Comfortable, spacious and affordable.",109363834,Ronald Geoffrey,Christchurch City,Linwood Ward,-43.54827,172.67983,Private room,184,1,1,2017-01-28,0.01,3,359,0,April_2026
 16591061,Long term double in colourful central city house,41527093,Karen,Christchurch City,Central Ward,-43.52779,172.64685,Private room,61,7,44,2025-03-15,0.39,5,13,0,April_2026
-16665527,"Stylish, charming, stay in our most chic suburb",110222955,Bev,Christchurch City,Fendalton Ward,-43.51142883300781,172.62551879882812,Private room,137,1,245,2026-04-17,2.18,1,320,61,April_2026
+16665527,"Stylish, charming, stay in our most chic suburb",110222955,Bev,Christchurch City,Fendalton Ward,-43.51142883300781,172.62551879882813,Private room,137,1,245,2026-04-17,2.18,1,320,61,April_2026
 16798852,Yani Home,111675989,Yani,Christchurch City,Waimairi Ward,-43.51944,172.56245,Private room,92,1,108,2026-03-31,0.96,1,269,9,April_2026
 16932670,Romantic Shepherds Hut at Coombe Farm B&B,33238586,Kathrine,Christchurch City,Banks Peninsula Ward,-43.78659,172.9838,Entire home/apt,217,1,405,2026-04-15,3.74,2,211,45,April_2026
 16984636,1 Bedroom Studio Full Self Contained and Private,109363834,Ronald Geoffrey,Christchurch City,Linwood Ward,-43.54882,172.68041,Private room,201,1,0,NA,NA,3,358,0,April_2026
@@ -516,7 +516,7 @@ ARENA#STADIUM#TRANZALPINE#CITY",125315385,Leeanne And David,Christchurch City,Sp
 Robinsons Bay",86033053,Amy,Christchurch City,Banks Peninsula Ward,-43.76103,172.95207,Entire home/apt,309,1,634,2026-04-15,8.18,1,257,87,April_2026
 40016407,Designer Styled Three Bedroom Apartment,50694865,Hotel,Christchurch City,Fendalton Ward,-43.520267,172.626251,Entire home/apt,460,1,14,2024-02-04,0.23,11,335,0,April_2026
 40039494,Home on Hagley,133825107,Yvette,Christchurch City,Riccarton Ward,-43.52922,172.61152,Entire home/apt,353,2,66,2026-03-29,0.86,2,74,32,April_2026
-40041040,Hidden Gem of Christchurch - Sleeps 13,202585247,Ohana,Christchurch City,Halswell Ward,-43.5761604309082,172.57949829101562,Entire home/apt,425,1,539,2026-04-12,6.93,136,145,50,April_2026
+40041040,Hidden Gem of Christchurch - Sleeps 13,202585247,Ohana,Christchurch City,Halswell Ward,-43.5761604309082,172.57949829101563,Entire home/apt,425,1,539,2026-04-12,6.93,136,145,50,April_2026
 40094069,Prime Location Handy CBD& Restaurants,45768555,Hasslefree Accommodation,Christchurch City,Central Ward,-43.52232,172.6295,Entire home/apt,208,1,147,2026-03-28,1.9,65,269,11,April_2026
 40098644,Superb park side haven in Central Christchurch,115613326,Martin And Myra,Christchurch City,Central Ward,-43.53915,172.62152,Entire home/apt,224,2,211,2026-04-12,3.01,1,71,27,April_2026
 40162727,"2 Private bedrooms sleeps4, Queen, King/or 2single",103405045,Kaaren,Christchurch City,Halswell Ward,-43.55499,172.53837,Private room,210,1,38,2026-04-07,0.51,1,265,4,April_2026
@@ -3440,7 +3440,7 @@ Style, comfort & birdsong!",80978447,Amy,Christchurch City,Heathcote Ward,-43.56
 1657007269163498200,paradise,742128122,Mohi,Christchurch City,Halswell Ward,-43.57609,172.54636,Entire home/apt,137,1,0,NA,NA,1,36,0,June 2026
 1586585146887720400,Secluded oasis in Halswell,736369842,Sandi,Christchurch City,Halswell Ward,-43.60199129469335,172.5747565886309,Entire home/apt,122,2,11,2026-04-18,2.1,1,160,11,June 2026
 997247852855455500,Pineapple Express,12680601,Scott,Christchurch City,Halswell Ward,-43.588,172.60638,Entire home/apt,559,2,7,2026-03-10,0.23,1,336,2,June 2026
-40041040,Hidden Gem of Christchurch - Sleeps 12,202585247,Ohana,Christchurch City,Halswell Ward,-43.5761604309082,172.57949829101562,Entire home/apt,452,1,546,2026-06-14,6.84,150,153,49,June 2026
+40041040,Hidden Gem of Christchurch - Sleeps 12,202585247,Ohana,Christchurch City,Halswell Ward,-43.5761604309082,172.57949829101563,Entire home/apt,452,1,546,2026-06-14,6.84,150,153,49,June 2026
 1359042873049714400,Temporary room available,679056810,Saravanan,Christchurch City,Hornby Ward,-43.535975734874135,172.5479840803218,Private room,86,1,1,2025-02-22,0.06,1,365,0,June 2026
 1323732454895857700,a cosy house in Wigram,669845493,Rickwan,Christchurch City,Halswell Ward,-43.55898,172.55758,Entire home/apt,201,1,0,NA,NA,1,364,0,June 2026
 1355554898687621400,Checketts Bungalow in Halswell,372248313,Wendy,Christchurch City,Halswell Ward,-43.5749772,172.5640088,Entire home/apt,198,1,20,2026-05-04,1.31,1,149,10,June 2026
@@ -3865,7 +3865,7 @@ Robinsons Bay",86033053,Amy,Christchurch City,Banks Peninsula Ward,-43.76103,172
 1524955553976998400,"Stylish New Unit, 2 mins from Hagley Park",422894906,Josie,Christchurch City,Spreydon Ward,-43.54212,172.61178,Private room,172,1,28,2026-05-30,3.37,1,169,28,June 2026
 1426565769027617500,New Townhouse - Walk to your Coffee and shops,22183001,Rachael,Christchurch City,Innes Ward,-43.50702960736995,172.63236530649417,Entire home/apt,348,2,34,2026-05-31,3.22,1,155,34,June 2026
 1443972075828422400,Cosy Corner- Riccarton,151829651,Heidi,Christchurch City,Riccarton Ward,-43.53336600377857,172.60166596141562,Entire home/apt,239,1,126,2026-05-31,10.68,2,139,126,June 2026
-16665527,"Stylish, charming, stay in our most chic suburb",110222955,Bev,Christchurch City,Fendalton Ward,-43.51142883300781,172.62551879882812,Private room,137,1,253,2026-06-07,2.21,1,283,67,June 2026
+16665527,"Stylish, charming, stay in our most chic suburb",110222955,Bev,Christchurch City,Fendalton Ward,-43.51142883300781,172.62551879882813,Private room,137,1,253,2026-06-07,2.21,1,283,67,June 2026
 774900641086656400,Cozy Town House - Walk to Wolfbrook Arena,682808597,Devon,Christchurch City,Spreydon Ward,-43.54659,172.60345,Entire home/apt,251,1,151,2026-06-16,3.56,28,194,62,June 2026
 1012592927913058e3,Long Cottage Mews Townhouse,306797561,Michael,Christchurch City,Fendalton Ward,-43.5139817,172.6228297,Entire home/apt,234,1,29,2026-04-26,1.21,1,335,19,June 2026
 1103832683069723100,Merivale Gem: 2BR Townhouse Oasis,551181197,Paula Kat Charlotte,Christchurch City,Fendalton Ward,-43.5129634,172.625209,Entire home/apt,211,1,62,2026-04-30,2.25,179,248,24,June 2026
@@ -4932,7 +4932,7 @@ Breakfast Included.",490039964,Tony,Christchurch City,Halswell Ward,-43.58814,17
 1299512103027805700,2 Bedrooms Modern Home Near airport,261760721,Kavinda,Christchurch City,Innes Ward,-43.441754,172.6352391,Private room,196,1,2,2026-02-08,0.11,3,363,1,June 2026
 1449090768698901e3,Fantail Loft,702752167,Julia,Christchurch City,Harewood Ward,-43.45408,172.61802,Private room,112,1,24,2026-04-13,2.59,1,23,24,June 2026
 1617957884255793e3,Stylish Stay Near Christchurch Airport,261760721,Kavinda,Christchurch City,Innes Ward,-43.44262929809786,172.63474107408214,Private room,115,1,6,2026-05-24,1.43,3,365,6,June 2026
-1798383,"3 private rooms up to 6 guests, spacious modern.",9431529,Shirley,Christchurch City,Burwood Ward,-43.46900177001953,172.66433715820312,Private room,166,2,182,2026-04-27,1.18,2,341,13,June 2026
+1798383,"3 private rooms up to 6 guests, spacious modern.",9431529,Shirley,Christchurch City,Burwood Ward,-43.46900177001953,172.66433715820313,Private room,166,2,182,2026-04-27,1.18,2,341,13,June 2026
 28162459,"Garden View Apartment, private and sunny.",102175588,Ann-Marie,Christchurch City,Harewood Ward,-43.45472,172.6245,Entire home/apt,123,1,548,2026-06-08,5.85,1,78,87,June 2026
 22509016,Comfortable stay with comforting view,42103536,Tia,Christchurch City,Hornby Ward,-43.52673,172.52733,Entire home/apt,360,1,48,2026-06-18,0.5,1,67,28,June 2026
 1285456776560220400,Belfast Escape – Modern Home Near the Airport,261760721,Kavinda,Christchurch City,Harewood Ward,-43.44061701107155,172.6339439097092,Private room,127,1,17,2026-03-13,0.93,3,365,12,June 2026
@@ -4949,7 +4949,7 @@ Breakfast Included.",490039964,Tony,Christchurch City,Halswell Ward,-43.58814,17
 52873542,#3 - The Wharf Seaview Apartments by AVI,70726871,Darren,Christchurch City,Banks Peninsula Ward,-43.80836,172.96205,Entire home/apt,180,1,4,2024-10-09,0.08,22,89,0,June 2026
 1290836826714308e3,Harbour View 3-Bedroom Retreat,20665858,Adam,Christchurch City,Banks Peninsula Ward,-43.7596192,172.945332,Entire home/apt,353,1,34,2026-06-01,1.93,23,347,19,June 2026
 1112335464725835500,Cliffside - Akaroa Holiday Home,145244100,Bachcare,Christchurch City,Banks Peninsula Ward,-43.81094,172.96507,Entire home/apt,469,2,3,2026-04-29,0.23,1215,363,2,June 2026
-28474210,"Akaroa Harbour Views | Deck, Cosy Fireplace",214946854,Julia,Christchurch City,Banks Peninsula Ward,-43.81583404541016,172.96060180664062,Entire home/apt,799,1,516,2026-03-20,5.49,1,329,4,June 2026
+28474210,"Akaroa Harbour Views | Deck, Cosy Fireplace",214946854,Julia,Christchurch City,Banks Peninsula Ward,-43.81583404541016,172.96060180664063,Entire home/apt,799,1,516,2026-03-20,5.49,1,329,4,June 2026
 1517988456772117500,Relaxed Kiwi Bach Over Akaroa Harbour - Port Watch,24205506,"Mayie, Judi And Karen At Bookahome",Christchurch City,Banks Peninsula Ward,-43.79982010343136,172.97314201917615,Entire home/apt,486,2,11,2026-05-31,1.38,80,257,11,June 2026
 106683600114257e4,Sea View Retreat,41339123,Antoinette,Christchurch City,Banks Peninsula Ward,-43.80012,172.97275,Entire home/apt,611,2,34,2026-04-05,1.15,1,319,16,June 2026
 1202398782018835700,Les Troupes Maison Nature,70726871,Darren,Christchurch City,Banks Peninsula Ward,-43.8086,172.96282,Entire home/apt,250,1,12,2025-08-17,0.57,22,189,1,June 2026
@@ -5015,7 +5015,7 @@ Breakfast Included.",490039964,Tony,Christchurch City,Halswell Ward,-43.58814,17
 31040916,Spacious Family Home in Central Christchurch,19256013,Robyn,Christchurch City,Fendalton Ward,-43.51423,172.60978,Entire home/apt,399,7,9,2024-12-30,0.13,2,168,0,June 2026
 14937801,Back House of Papanui,50163342,Susie,Christchurch City,Papanui Ward,-43.49113,172.59717,Entire home/apt,246,2,275,2026-05-03,2.31,2,95,16,June 2026
 600960748449101300,Central Christchurch - double room. Free parking.,97189307,Jo,Christchurch City,Fendalton Ward,-43.511684,172.619247,Private room,133,2,69,2026-06-04,1.39,1,330,9,June 2026
-5752166,Chic Private Studio 6mins from Airport & shops/bus,28774099,Liz,Christchurch City,Harewood Ward,-43.48641586303711,172.58523559570312,Entire home/apt,177,1,533,2026-06-03,9.74,3,268,30,June 2026
+5752166,Chic Private Studio 6mins from Airport & shops/bus,28774099,Liz,Christchurch City,Harewood Ward,-43.48641586303711,172.58523559570313,Entire home/apt,177,1,533,2026-06-03,9.74,3,268,30,June 2026
 1088774752680002600,Beautiful Haven Near Airport!,131734373,Alicia,Christchurch City,Harewood Ward,-43.4902,172.5768,Entire home/apt,309,1,193,2026-06-06,6.74,10,302,73,June 2026
 729072384375709e3,Home away from home.,85947440,Zoe,Christchurch City,Harewood Ward,-43.47839,172.58391,Entire home/apt,384,3,59,2026-05-31,1.39,1,191,9,June 2026
 1424119646402978800,Home in Ilam,94697829,Andrew,Christchurch City,Waimairi Ward,-43.516116,172.5756165,Entire home/apt,217,2,15,2026-04-17,1.57,1,137,15,June 2026
@@ -6332,7 +6332,7 @@ close to city",508592191,Maria E,Christchurch City,Halswell Ward,-43.5654606,172
 1097487,Heritage Magic in Merivale,4993285,Paulette,Christchurch City,Fendalton Ward,-43.51149,172.6254,Private room,189,1,230,2025-03-03,2.07,1,321,0,March_2026
 1429281,Self contained & fully equipped,7619275,Liz & Gordon,Christchurch City,Halswell Ward,-43.56982,172.55229,Private room,69,5,201,2026-03-03,1.31,1,328,22,March_2026
 1461771,Mt Pleasant - Retro Living apartment,6353005,Suzanne,Christchurch City,Heathcote Ward,-43.55813,172.72025,Entire home/apt,360,1,16,2024-06-03,0.12,1,45,0,March_2026
-1798383,"3 private rooms up to 6 guests, spacious modern.",9431529,Shirley,Christchurch City,Burwood Ward,-43.46900177001953,172.66433715820312,Private room,166,2,181,2026-02-21,1.2,2,327,11,March_2026
+1798383,"3 private rooms up to 6 guests, spacious modern.",9431529,Shirley,Christchurch City,Burwood Ward,-43.46900177001953,172.66433715820313,Private room,166,2,181,2026-02-21,1.2,2,327,11,March_2026
 1837611,"Close to University, 10 mins from Airport and City",9542449,Shona,Christchurch City,Fendalton Ward,-43.51332,172.5784,Private room,86,2,98,2026-02-17,0.66,1,207,17,March_2026
 1893596,"Luxury at its best, Quail's Nest",5225682,Shelley,Christchurch City,Banks Peninsula Ward,-43.62728,172.71872,Entire home/apt,217,2,196,2026-02-27,1.3,1,193,6,March_2026
 2009003,Luxury Cass Bay Retreat (B),10339399,Vivienne,Christchurch City,Banks Peninsula Ward,-43.60411,172.69502,Entire home/apt,206,1,448,2026-03-16,3.03,3,304,53,March_2026
@@ -6364,7 +6364,7 @@ close to city",508592191,Maria E,Christchurch City,Halswell Ward,-43.5654606,172
 5459948,Beautiful historic cottage,28321790,Janette,Christchurch City,Banks Peninsula Ward,-43.60187,172.71958,Private room,145,1,0,NA,NA,1,280,0,March_2026
 5738538,Akaroa Coastal Studio,26183903,Jenny & John,Christchurch City,Banks Peninsula Ward,-43.82883,172.94328,Private room,210,1,706,2026-03-08,5.39,1,303,83,March_2026
 5739354,Modern self contained unit,29133056,Nadia,Christchurch City,Banks Peninsula Ward,-43.59799,172.71911,Private room,309,1,8,2026-02-28,0.32,1,269,6,March_2026
-5752166,Chic Private Studio 6mins from Airport & shops/bus,28774099,Liz,Christchurch City,Harewood Ward,-43.48641586303711,172.58523559570312,Entire home/apt,139,1,529,2026-03-15,10.24,3,243,48,March_2026
+5752166,Chic Private Studio 6mins from Airport & shops/bus,28774099,Liz,Christchurch City,Harewood Ward,-43.48641586303711,172.58523559570313,Entire home/apt,139,1,529,2026-03-15,10.24,3,243,48,March_2026
 5787709,The Velvet Suite,21073822,Sue And Greg,Christchurch City,Harewood Ward,-43.47665,172.56715,Entire home/apt,325,1,28,2026-02-06,0.21,2,243,4,March_2026
 5936861,Your own Eco friendly bedroom + lounge unit,30825105,Shaun And Vanessa,Christchurch City,Banks Peninsula Ward,-43.76285,172.80538,Entire home/apt,172,1,400,2026-03-14,3.16,2,337,35,March_2026
 6111519,"Close to airport, quiet double bedroom upstairs",13171208,Ellis,Christchurch City,Harewood Ward,-43.48177,172.58516,Private room,75,2,21,2026-02-27,0.16,2,153,11,March_2026
@@ -6484,7 +6484,7 @@ close to city",508592191,Maria E,Christchurch City,Halswell Ward,-43.5654606,172
 16517954,"Garden,quiet,queen bed ,b'fast,nr Uni/city/airport",108085108,Barbara,Christchurch City,Fendalton Ward,-43.51354,172.57738,Private room,92,2,125,2026-03-15,1.13,3,14,27,March_2026
 16578589,Garden Studio with ocean views,12516114,Kaye,Christchurch City,Heathcote Ward,-43.57302,172.7554,Entire home/apt,163,2,247,2026-03-14,2.2,1,102,23,March_2026
 16591061,Long term double in colourful central city house,41527093,Karen,Christchurch City,Central Ward,-43.52779,172.64685,Private room,61,7,44,2025-03-15,0.39,5,25,0,March_2026
-16665527,"Stylish, charming, stay in our most chic suburb",110222955,Bev,Christchurch City,Fendalton Ward,-43.51142883300781,172.62551879882812,Private room,137,1,237,2026-03-18,2.13,1,335,60,March_2026
+16665527,"Stylish, charming, stay in our most chic suburb",110222955,Bev,Christchurch City,Fendalton Ward,-43.51142883300781,172.62551879882813,Private room,137,1,237,2026-03-18,2.13,1,335,60,March_2026
 16798852,Yani Home,111675989,Yani,Christchurch City,Waimairi Ward,-43.51944,172.56245,Private room,92,1,107,2026-02-27,0.96,1,269,9,March_2026
 16932670,Romantic Shepherds Hut at Coombe Farm B&B,33238586,Kathrine,Christchurch City,Banks Peninsula Ward,-43.78659,172.9838,Entire home/apt,217,1,398,2026-03-15,3.71,2,204,40,March_2026
 17101050,Relax in Comfort - The Stables- Heart of Lyttelton,59986216,Robin,Christchurch City,Banks Peninsula Ward,-43.60284,172.72009,Entire home/apt,353,2,147,2026-02-21,1.4,1,355,20,March_2026
@@ -6850,7 +6850,7 @@ ARENA#STADIUM#TRANZALPINE#CITY",125315385,Leeanne And David,Christchurch City,Sp
 Robinsons Bay",86033053,Amy,Christchurch City,Banks Peninsula Ward,-43.76103,172.95207,Entire home/apt,262,1,628,2026-03-09,8.22,1,256,88,March_2026
 40016407,Designer Styled Three Bedroom Apartment,50694865,Hotel,Christchurch City,Fendalton Ward,-43.520267,172.626251,Entire home/apt,518,1,14,2024-02-04,0.23,11,334,0,March_2026
 40039494,Home on Hagley,133825107,Yvette,Christchurch City,Riccarton Ward,-43.52922,172.61152,Entire home/apt,343,2,64,2026-03-07,0.84,2,70,30,March_2026
-40041040,Hidden Gem of Christchurch - Sleeps 13,202585247,Ohana,Christchurch City,Halswell Ward,-43.5761604309082,172.57949829101562,Entire home/apt,494,1,537,2026-03-17,7,137,133,52,March_2026
+40041040,Hidden Gem of Christchurch - Sleeps 13,202585247,Ohana,Christchurch City,Halswell Ward,-43.5761604309082,172.57949829101563,Entire home/apt,494,1,537,2026-03-17,7,137,133,52,March_2026
 40094069,Prime Location Handy CBD& Restaurants,45768555,Hasslefree Accommodation,Christchurch City,Central Ward,-43.52232,172.6295,Entire home/apt,249,1,146,2026-02-01,1.91,65,310,10,March_2026
 40098644,Superb park side haven in Central Christchurch,115613326,Martin And Myra,Christchurch City,Central Ward,-43.53915,172.62152,Entire home/apt,227,2,207,2026-02-28,2.99,1,144,27,March_2026
 40162727,"2 Private bedrooms sleeps4, Queen, King/or 2single",103405045,Kaaren,Christchurch City,Halswell Ward,-43.55499,172.53837,Private room,210,1,37,2026-02-21,0.5,1,252,3,March_2026
@@ -9458,7 +9458,7 @@ Beach Relaxing",745378382,Lynley,Christchurch City,Coastal Ward,-43.51821,172.73
 1219952962339024600,4 Bedroom Home near Christchurch Airport,250552000,Sreela,Christchurch City,Harewood Ward,-43.45139,172.61819,Entire home/apt,503,2,9,2026-04-19,0.53,2,267,3,May_2026
 6111519,"Close to airport, quiet double bedroom upstairs",13171208,Ellis,Christchurch City,Harewood Ward,-43.48177,172.58516,Private room,75,2,21,2026-04-30,0.16,2,128,12,May_2026
 1292546632781932800,Modern 5 bdrm House perfect for groups & families,522470829,Vicky,Christchurch City,Harewood Ward,-43.470831697633784,172.57265143096447,Entire home/apt,531,1,18,2026-04-20,2.23,1,217,18,May_2026
-5752166,Chic Private Studio 6mins from Airport & shops/bus,28774099,Liz,Christchurch City,Harewood Ward,-43.48641586303711,172.58523559570312,Entire home/apt,133,1,532,2026-05-15,9.88,3,266,33,May_2026
+5752166,Chic Private Studio 6mins from Airport & shops/bus,28774099,Liz,Christchurch City,Harewood Ward,-43.48641586303711,172.58523559570313,Entire home/apt,133,1,532,2026-05-15,9.88,3,266,33,May_2026
 841037356438446800,Stunning cottage close 2 airport,23389870,Hennie,Christchurch City,Harewood Ward,-43.48859,172.5735,Entire home/apt,485,1,96,2026-03-30,2.68,5,190,37,May_2026
 1057494426658475600,Casebrook Guest Suite - 5 min drive to airport,553364401,Timothy,Christchurch City,Harewood Ward,-43.469555970085935,172.6016340404749,Entire home/apt,126,1,185,2026-04-26,6.35,1,174,66,May_2026
 1291518119827025400,"Spacious Studio Suite, Private location",271945445,Kris,Christchurch City,Harewood Ward,-43.44560052587537,172.63195758255665,Entire home/apt,240,1,22,2026-04-26,1.28,1,156,16,May_2026
@@ -9889,7 +9889,7 @@ Style, comfort & birdsong!",80978447,Amy,Christchurch City,Heathcote Ward,-43.56
 1660519616290864600,Ground floor Apartment 1 min walk from waterfront,20665858,Adam,Christchurch City,Banks Peninsula Ward,-43.80994237871143,172.96198415182636,Entire home/apt,158,1,4,2026-05-04,3.53,23,334,4,May_2026
 1049690496785725700,Hilltop Hideaway Akaroa,92070095,Philippa,Christchurch City,Banks Peninsula Ward,-43.81054,172.97109,Entire home/apt,226,2,89,2026-05-18,3.04,1,221,24,May_2026
 1580777874851531800,Selwyn Heights,20665858,Adam,Christchurch City,Banks Peninsula Ward,-43.8127,172.96594,Entire home/apt,298,1,29,2026-05-06,6.08,23,320,29,May_2026
-28474210,"Akaroa Harbour Views | Deck, Cosy Fireplace",214946854,Julia,Christchurch City,Banks Peninsula Ward,-43.81583404541016,172.96060180664062,Entire home/apt,799,1,516,2026-03-20,5.54,1,327,4,May_2026
+28474210,"Akaroa Harbour Views | Deck, Cosy Fireplace",214946854,Julia,Christchurch City,Banks Peninsula Ward,-43.81583404541016,172.96060180664063,Entire home/apt,799,1,516,2026-03-20,5.54,1,327,4,May_2026
 737452,Mumfords Akaroa,3851282,Nicky,Christchurch City,Banks Peninsula Ward,-43.82343,172.94643,Entire home/apt,394,2,102,2026-04-11,0.67,1,187,3,May_2026
 601764322116880600,Luxe Eco friendly one bedroom cottage,453561286,Richard,Christchurch City,Banks Peninsula Ward,-43.76576,172.79105,Entire home/apt,263,2,29,2025-12-29,0.6,1,358,4,May_2026
 88709202286601e4,Harbour Views - 5Bed/4Bath - Walk to Beach & Cafés,6267072,Craig,Christchurch City,Banks Peninsula Ward,-43.8063189,172.9687008,Entire home/apt,389,2,64,2026-05-14,2.18,1,103,27,May_2026
@@ -9993,7 +9993,7 @@ Robinsons Bay",86033053,Amy,Christchurch City,Banks Peninsula Ward,-43.76103,172
 1383506021723956700,Family Three Bedroom - Two Bathroom Gated Carpark,136453482,Kelly,Christchurch City,Fendalton Ward,-43.5120107183578,172.6230112775695,Entire home/apt,472,1,29,2026-05-02,2.65,2,297,29,May_2026
 675571824847066100,Elegant 2-Level Penthouse with Panoramic Views,682808597,Devon,Christchurch City,Fendalton Ward,-43.52106,172.62068,Entire home/apt,950,1,189,2026-04-27,4.18,25,258,59,May_2026
 1611175409041069e3,Parkside Home in Merivale,39393412,Kate,Christchurch City,Fendalton Ward,-43.52277078885121,172.61681728374035,Entire home/apt,657,2,2,2026-04-02,0.61,2,144,2,May_2026
-16665527,"Stylish, charming, stay in our most chic suburb",110222955,Bev,Christchurch City,Fendalton Ward,-43.51142883300781,172.62551879882812,Private room,137,1,250,2026-05-08,2.2,1,320,65,May_2026
+16665527,"Stylish, charming, stay in our most chic suburb",110222955,Bev,Christchurch City,Fendalton Ward,-43.51142883300781,172.62551879882813,Private room,137,1,250,2026-05-08,2.2,1,320,65,May_2026
 9.8642020613682394e+17,Merivale comfy 2 beds with free parking,86216394,Min,Christchurch City,Fendalton Ward,-43.51966,172.62374,Entire home/apt,183,1,51,2026-04-18,1.62,37,146,14,May_2026
 1616463256398056700,Merivale Lane Sanctuary,146693943,Andrea,Christchurch City,Fendalton Ward,-43.51569,172.62271,Entire home/apt,269,1,13,2026-05-17,3.82,2,177,13,May_2026
 28316463,Good as New Studio #7,50694865,Hotel,Christchurch City,Fendalton Ward,-43.520267,172.626251,Entire home/apt,201,1,78,2026-02-08,0.84,11,358,1,May_2026
@@ -10193,7 +10193,7 @@ Breakfast Included.",490039964,Tony,Christchurch City,Halswell Ward,-43.58814,17
 1564128034937933300,Room at iris sphere 楚云居,235950309,Shizheng,Christchurch City,Halswell Ward,-43.58318,172.59959,Private room,97,1,2,2026-04-25,0.55,2,251,2,May_2026
 1033721397994868600,Amazing Christchurch City and Alpine Views,437616762,Ketan,Christchurch City,Halswell Ward,-43.5870491,172.6074405,Entire home/apt,153,1,51,2026-05-10,1.7,1,259,23,May_2026
 1200612241937963300,Cedarstone Villa - Private Guest House,589760089,Ram,Christchurch City,Halswell Ward,-43.58236,172.58073,Private room,97,1,7,2026-02-23,1.01,1,91,7,May_2026
-40041040,Hidden Gem of Christchurch - Sleeps 12,202585247,Ohana,Christchurch City,Halswell Ward,-43.5761604309082,172.57949829101562,Entire home/apt,504,1,542,2026-05-15,6.87,145,147,48,May_2026
+40041040,Hidden Gem of Christchurch - Sleeps 12,202585247,Ohana,Christchurch City,Halswell Ward,-43.5761604309082,172.57949829101563,Entire home/apt,504,1,542,2026-05-15,6.87,145,147,48,May_2026
 19812732,Bush and birds,139965217,Sharyn,Christchurch City,Halswell Ward,-43.60153,172.57083,Entire home/apt,172,2,214,2025-01-12,2.02,1,116,0,May_2026
 1247472403510091800,"Family Reunion, Sports Group! 4BR Private Spacious",43367626,Sharon,Christchurch City,Halswell Ward,-43.56945774205247,172.55771085619926,Entire home/apt,521,1,41,2026-05-09,2.14,18,123,27,May_2026
 1251872501117185e3,Sunlit Sanctuary with Private Patio in Wigram,202585247,Ohana,Christchurch City,Halswell Ward,-43.5566022,172.5589218,Entire home/apt,339,1,73,2026-05-17,3.89,145,138,54,May_2026
@@ -11634,7 +11634,7 @@ Free parking",232429236,Payam,Christchurch City,Waimairi Ward,-43.5026731,172.55
 25789624,Warm room in modern home,86632390,Trish,Christchurch City,Burwood Ward,-43.47943,172.67865,Private room,86,1,484,2026-05-16,5.01,1,343,36,May_2026
 1616472994531191300,Beautiful Room with a shared bathroom,440220842,Tilaram,Christchurch City,Burwood Ward,-43.48088,172.671,Private room,73,1,4,2026-03-13,1.33,1,365,4,May_2026
 939512531332903800,"New home, new bed, warm home - low price",201638718,Helen,Christchurch City,Burwood Ward,-43.47688394738516,172.67062582075596,Private room,57,1,184,2026-05-02,5.4,3,230,32,May_2026
-1798383,"3 private rooms up to 6 guests, spacious modern.",9431529,Shirley,Christchurch City,Burwood Ward,-43.46900177001953,172.66433715820312,Private room,166,2,182,2026-04-27,1.19,2,343,13,May_2026
+1798383,"3 private rooms up to 6 guests, spacious modern.",9431529,Shirley,Christchurch City,Burwood Ward,-43.46900177001953,172.66433715820313,Private room,166,2,182,2026-04-27,1.19,2,343,13,May_2026
 660283187015259900,Big Bedroom with a Queens bed,466458668,Bonya,Christchurch City,Burwood Ward,-43.5031167,172.6963294,Private room,69,1,98,2025-11-18,2.06,2,113,7,May_2026
 17479227,"Lovely, sunny ensuite home with most facilities",118404180,Dave & Anne,Christchurch City,Burwood Ward,-43.50051,172.68127,Entire home/apt,147,2,76,2026-04-29,0.68,2,233,7,May_2026
 834302475667982100,"Unbeatable Price, Brekky, Close to CBD, Sunny Room",271872412,Marie,Christchurch City,Burwood Ward,-43.5117,172.67584,Private room,62,1,53,2026-03-08,1.35,2,339,10,May_2026
@@ -12595,7 +12595,7 @@ City Center new luxury Apartment",651211728,Johann,Christchurch City,Central War
 1449090768698901e3,Fantail Loft,702752167,Julia,Christchurch City,Harewood Ward,-43.45408,172.61802,Private room,68,1,6,2025-11-11,3.16,1,123,6,November_2025
 22792957,Airport Apartment,167999187,Lauris,Christchurch City,Harewood Ward,-43.4771,172.5824,Entire home/apt,132,1,155,2025-03-14,1.64,1,107,14,November_2025
 1376027208824743700,Applewood Cabin 1 by Tiny Away,481232463,Tiny Away NZ,Christchurch City,Harewood Ward,-43.4761659,172.5846462,Entire home/apt,155,1,0,NA,NA,103,332,0,November_2025
-5752166,Chic Private Studio 6mins from Airport & shops/bus,28774099,Elizabeth,Christchurch City,Harewood Ward,-43.48641586303711,172.58523559570312,Entire home/apt,109,1,522,2025-11-09,11.03,2,264,64,November_2025
+5752166,Chic Private Studio 6mins from Airport & shops/bus,28774099,Elizabeth,Christchurch City,Harewood Ward,-43.48641586303711,172.58523559570313,Entire home/apt,109,1,522,2025-11-09,11.03,2,264,64,November_2025
 4063028,The Pool Studio,21073822,Sue & Greg,Christchurch City,Harewood Ward,-43.47764,172.5668,Entire home/apt,295,1,32,2024-02-08,0.25,2,258,0,November_2025
 43669699,LyLo Queen Ensuite Accessible,368461906,Alexandria,Christchurch City,Harewood Ward,-43.49107,172.55009,Private room,271,1,0,NA,NA,16,307,0,November_2025
 45549098,3 Bedroom House,98758734,North South Holiday Park,Christchurch City,Harewood Ward,-43.4716,172.56983,Entire home/apt,412,2,4,2022-10-31,0.09,19,275,0,November_2025
@@ -12920,7 +12920,7 @@ St Albans",370683749,Shannon,Christchurch City,Innes Ward,-43.5105948,172.638700
 897232512006829600,"2 bed Escape, Heart of Riccarton w/carpark",482671075,Paula Corinne,Christchurch City,Riccarton Ward,-43.5351477,172.598604,Entire home/apt,194,1,89,2025-10-19,3,124,71,29,November_2025
 998075699838206800,Chic Modern Apartment in Riccarton w/ Free Parking,682808597,Devon,Christchurch City,Riccarton Ward,-43.53629,172.59765,Entire home/apt,144,1,52,2025-11-09,2.13,22,255,29,November_2025
 1361186163445105200,2BDR. Riccarton. FREE Carpark,43367626,Sharon,Christchurch City,Riccarton Ward,-43.5356932185432,172.5847776979208,Entire home/apt,205,1,18,2025-10-16,2.51,13,20,18,November_2025
-11927990,Fabulous Reviews : Host of The Year Finalist 2022,16967897,Joan,Christchurch City,Riccarton Ward,-43.529441833496094,172.60879516601562,Entire home/apt,349,2,223,2024-03-05,1.91,2,164,0,November_2025
+11927990,Fabulous Reviews : Host of The Year Finalist 2022,16967897,Joan,Christchurch City,Riccarton Ward,-43.529441833496094,172.60879516601563,Entire home/apt,349,2,223,2024-03-05,1.91,2,164,0,November_2025
 48596199,Private modern residence in central location,151829651,Wan Yu,Christchurch City,Riccarton Ward,-43.53662,172.60406,Entire home/apt,195,2,513,2025-10-27,9.14,2,228,109,November_2025
 47850750,"Best Location Park, Hospital, Supermarket, handy.",45768555,Lexia Margaret,Christchurch City,Riccarton Ward,-43.52854,172.61055,Entire home/apt,157,1,183,2025-10-07,3.14,62,291,23,November_2025
 1342194705971178e3,Tranquil Townhouse by Hagley Park,258317270,Claire,Christchurch City,Riccarton Ward,-43.526202073754035,172.60996833443642,Entire home/apt,136,1,31,2025-11-09,3.22,1,78,31,November_2025
@@ -13612,7 +13612,7 @@ Robinsons Bay",86033053,Amy,Christchurch City,Banks Peninsula Ward,-43.76103,172
 16470077,"B & B,2-bed,value, garden spa, nr city/uni/airport",108085108,Barbara Marilyn,Christchurch City,Fendalton Ward,-43.51354,172.5774,Private room,86,2,76,2025-03-25,0.72,3,132,10,November_2025
 866332460145387100,Private Room Only with Ensuite,12597832,Jd,Christchurch City,Fendalton Ward,-43.51662,172.58431,Private room,61,1,34,2025-07-30,1.09,1,65,11,November_2025
 19000230,LOCATION .. central to everything! Sunny + modern!,905079,Fiona And Steven,Christchurch City,Fendalton Ward,-43.51804,172.58487,Private room,98,2,223,2025-09-13,2.17,1,242,20,November_2025
-16665527,"Stylish, charming, stay in our most chic suburb",110222955,Beverley Pamela,Christchurch City,Fendalton Ward,-43.51142883300781,172.62551879882812,Private room,90,1,193,2025-11-09,1.8,1,284,32,November_2025
+16665527,"Stylish, charming, stay in our most chic suburb",110222955,Beverley Pamela,Christchurch City,Fendalton Ward,-43.51142883300781,172.62551879882813,Private room,90,1,193,2025-11-09,1.8,1,284,32,November_2025
 1837611,"Close to University, 10 mins from Airport and City",9542449,Shona,Christchurch City,Fendalton Ward,-43.51332,172.5784,Private room,75,2,89,2025-11-09,0.61,1,225,13,November_2025
 1055944673062586200,Budget Single Room close to Airport,96129652,Su,Christchurch City,Fendalton Ward,-43.50445,172.58762,Private room,48,1,121,2025-09-27,5.33,4,48,47,November_2025
 1055942315332859600,Budget Room  Centrally located,96129652,Su,Christchurch City,Fendalton Ward,-43.50348128155772,172.58698046207428,Private room,48,1,144,2025-11-04,6.33,4,36,75,November_2025
@@ -14187,7 +14187,7 @@ Forest Park",710516136,Philippe Alain,Christchurch City,Coastal Ward,-43.4737022
 1490325394309578e3,Modern Hillside Stay,151740992,Noby,Christchurch City,Halswell Ward,-43.58842,172.60675,Entire home/apt,494,3,0,NA,NA,1,36,0,November_2025
 1367113532457819400,Bibiana Breeze,370686572,Lin,Christchurch City,Halswell Ward,-43.56677655558515,172.57146254181862,Entire home/apt,231,1,11,2025-11-10,1.64,1,335,11,November_2025
 1063219451776799400,Ravensdale Vista,15742007,Peter Michael,Christchurch City,Halswell Ward,-43.5819335,172.6059837,Entire home/apt,145,2,3,2024-05-12,0.14,3,72,0,November_2025
-40041040,Hidden Gem of Christchurch - Sleeps 13,202585247,Ohana,Christchurch City,Halswell Ward,-43.5761604309082,172.57949829101562,Entire home/apt,293,1,515,2025-11-04,7.11,123,157,57,November_2025
+40041040,Hidden Gem of Christchurch - Sleeps 13,202585247,Ohana,Christchurch City,Halswell Ward,-43.5761604309082,172.57949829101563,Entire home/apt,293,1,515,2025-11-04,7.11,123,157,57,November_2025
 849686201373934500,Stunning new home tranquil hill views,187564220,Zane,Christchurch City,Halswell Ward,-43.59396,172.57374,Entire home/apt,218,1,172,2025-10-19,5.33,4,268,52,November_2025
 901177356780318600,"Clear Sky View
 *New House* Plus Spa on Request",326110546,Cadmiel,Christchurch City,Halswell Ward,-43.57518,172.58044,Entire home/apt,208,2,43,2025-10-26,1.54,1,139,17,November_2025
@@ -14779,7 +14779,7 @@ Boutique City Apartment",44543346,Arjun,Christchurch City,Central Ward,-43.52970
 17389174,Sunny modern room w/ door to garden & own bathroom,117558341,Alison,Christchurch City,Central Ward,-43.5158,172.66294,Private room,54,3,271,2025-10-26,2.57,1,136,26,November_2025
 51480433,"20min walk to city, large room with ensuite",76714495,Damein,Christchurch City,Central Ward,-43.51924,172.64817,Private room,55,2,85,2025-11-04,2.11,1,306,30,November_2025
 1299168997740935200,Cosy Room Christchurch Central,664228788,Xuemei,Christchurch City,Central Ward,-43.534779,172.6606091,Private room,64,1,31,2025-11-06,2.94,1,344,31,November_2025
-32456437,Discover more of Christchurch,88598911,Kate,Christchurch City,Central Ward,-43.5300407409668,172.64346313476562,Private room,97,1,51,2025-11-05,0.8,1,232,12,November_2025
+32456437,Discover more of Christchurch,88598911,Kate,Christchurch City,Central Ward,-43.5300407409668,172.64346313476563,Private room,97,1,51,2025-11-05,0.8,1,232,12,November_2025
 1161175939805444e3,En-suite Queen Bed - Close to City,148561087,Xuejiao,Christchurch City,Central Ward,-43.54624,172.62257,Private room,88,1,48,2025-07-09,2.68,1,4,33,November_2025
 45944592,Spacious bedroom with private bathroom,15218301,Kate,Christchurch City,Central Ward,-43.52586,172.66755,Private room,58,1,280,2025-11-11,6.35,2,38,54,November_2025
 150315157901349e4,Posh on Peterborough,666456183,Helen,Christchurch City,Central Ward,-43.5256110924079,172.63564896560672,Private room,163,1,2,2025-11-09,2,1,343,2,November_2025
@@ -16279,7 +16279,7 @@ on the edge of the CBD.",125448109,Madeline,Christchurch City,Innes Ward,-43.515
 11576486,Family friendly Eco Stay,30825105,Shaun And Vanessa,Christchurch City,Banks Peninsula Ward,-43.76331,172.80575,Entire home/apt,225,1,137,2025-09-06,1.42,2,298,36,October_2025
 1522038305398958600,Hidden Halswell Gem,170302078,Jillian Margaret,Christchurch City,Halswell Ward,-43.58985701586261,172.57148006942813,Entire home/apt,193,3,0,NA,NA,1,108,0,October_2025
 1474365728952414700,The light Inn,235491432,Yingming,Christchurch City,Harewood Ward,-43.47612,172.59181,Entire home/apt,288,3,0,NA,NA,1,48,0,October_2025
-32456437,Discover more of Christchurch,88598911,Kate,Christchurch City,Central Ward,-43.5300407409668,172.64346313476562,Private room,109,1,49,2025-02-28,0.78,1,286,11,October_2025
+32456437,Discover more of Christchurch,88598911,Kate,Christchurch City,Central Ward,-43.5300407409668,172.64346313476563,Private room,109,1,49,2025-02-28,0.78,1,286,11,October_2025
 1261794313225782800,roXztr Retreat,655827282,Jesley,Christchurch City,Innes Ward,-43.50248830348178,172.65703870975346,Private room,65,3,35,2025-07-03,2.95,2,63,35,October_2025
 1452655790464282e3,2 Bdrm in Merivale| free Carpark,43367626,Sharon,Christchurch City,Fendalton Ward,-43.51556,172.62535,Entire home/apt,195,2,5,2025-09-07,1.61,12,64,5,October_2025
 1061902202885086600,Next to Margaret Mahy Playground With Free Parking,49135895,Qin,Christchurch City,Central Ward,-43.528120141681114,172.6393819297962,Entire home/apt,140,1,12,2025-07-09,2.05,1,30,12,October_2025
@@ -16540,7 +16540,7 @@ City Center new luxury Apartment",651211728,Johannes Frederik,Christchurch City,
 1048306929505766500,Sunny Oasis: Modern Loft Hidden on Cashel,311094794,Lulu,Christchurch City,Central Ward,-43.5335979,172.6499267,Entire home/apt,113,1,89,2025-09-13,4.12,2,252,46,October_2025
 1460615188809441e3,New Central Stay Near Christchurch’s Best | Unit 2,573419952,Bruce,Christchurch City,Central Ward,-43.53237,172.64842,Entire home/apt,240,1,13,2025-09-27,7.36,8,253,13,October_2025
 1342946465975262e3,Self Contained Unit: 10mins from CBD/ EV Charger,24205506,Karen Louise,Christchurch City,Fendalton Ward,-43.51194737647095,172.60284757964183,Entire home/apt,107,1,5,2025-09-12,1.58,77,127,5,October_2025
-5752166,Chic Private Studio 6mins from Airport & shops/bus,28774099,Elizabeth,Christchurch City,Harewood Ward,-43.48641586303711,172.58523559570312,Entire home/apt,131,1,515,2025-09-30,11.15,2,274,62,October_2025
+5752166,Chic Private Studio 6mins from Airport & shops/bus,28774099,Elizabeth,Christchurch City,Harewood Ward,-43.48641586303711,172.58523559570313,Entire home/apt,131,1,515,2025-09-30,11.15,2,274,62,October_2025
 1492591036106748e3,City Escape 2B2B in Central CHCH,378938952,Joseph,Christchurch City,Central Ward,-43.5261118,172.6474369,Entire home/apt,134,2,2,2025-09-30,2,2,282,2,October_2025
 1039533776526946400,Convenient Urban Townhouse 2 carparks available,45768555,Lexia Margaret,Christchurch City,Central Ward,-43.52938,172.65176,Entire home/apt,147,1,58,2025-09-17,2.65,60,319,19,October_2025
 12073907,Grassmere Estate  With Beautiful Tranquil Gardens,64702979,Kim And Mandy,Christchurch City,Papanui Ward,-43.49461,172.61691,Entire home/apt,179,2,238,2025-09-28,2.1,1,233,13,October_2025
@@ -16955,7 +16955,7 @@ ARENA#STADIUM#TRANZALPINE#CITY",125315385,Leeanne And David,Christchurch City,Sp
 1059780873612306700,City heaven on Tuam Street 2beds1bath,86216394,Min,Christchurch City,Central Ward,-43.53525,172.63105,Entire home/apt,121,1,45,2025-09-28,2.16,40,122,30,October_2025
 17624439,Character Home - Modern Comfort | Close to Airport,24205506,Karen Louise,Christchurch City,Hornby Ward,-43.52676,172.55393,Entire home/apt,313,2,131,2025-04-26,1.26,77,286,5,October_2025
 1182783472671692300,Merivale/Hagley Park Favourite - Stylish & Quiet,584521739,Suzanna Jane,Christchurch City,Fendalton Ward,-43.52137,172.61819,Entire home/apt,378,2,53,2025-10-03,3.4,1,55,40,October_2025
-40041040,Hidden Gem of Christchurch - Sleeps 13,202585247,Ohana,Christchurch City,Halswell Ward,-43.5761604309082,172.57949829101562,Entire home/apt,302,1,512,2025-10-02,7.18,121,155,60,October_2025
+40041040,Hidden Gem of Christchurch - Sleeps 13,202585247,Ohana,Christchurch City,Halswell Ward,-43.5761604309082,172.57949829101563,Entire home/apt,302,1,512,2025-10-02,7.18,121,155,60,October_2025
 10792884,Vintage charm - 1930s Home with Luxe Bedding,52334730,Sutza,Christchurch City,Cashmere Ward,-43.567100524902344,172.6211395263672,Entire home/apt,160,2,281,2025-10-01,2.41,1,67,19,October_2025
 11529335,Merivale Self-contained Studio,21295271,Margaret,Christchurch City,Fendalton Ward,-43.51583,172.62082,Entire home/apt,77,1,598,2025-09-19,5.33,1,166,93,October_2025
 729072384375709e3,Home away from home.,85947440,Zoe,Christchurch City,Harewood Ward,-43.47839,172.58391,Entire home/apt,300,30,50,2025-02-22,1.47,1,227,6,October_2025
@@ -17217,7 +17217,7 @@ Robinsons Bay",86033053,Amy,Christchurch City,Banks Peninsula Ward,-43.76103,172
 737452,Mumfords Akaroa,3851282,Susan Margaret,Christchurch City,Banks Peninsula Ward,-43.82343,172.94643,Entire home/apt,330,2,99,2025-04-13,0.69,1,256,5,October_2025
 41858980,The Boathouse - Akaroa Holiday Home,145244100,Bachcare,Christchurch City,Banks Peninsula Ward,-43.8072,172.96675,Entire home/apt,318,2,20,2024-12-16,0.29,1547,355,1,October_2025
 44523242,Pointers - Akaroa Holiday Home,145244100,Bachcare,Christchurch City,Banks Peninsula Ward,-43.8073,172.97327,Entire home/apt,344,2,10,2024-11-13,0.17,1547,359,1,October_2025
-16665527,"Stylish, charming, stay in our most chic suburb",110222955,Beverley Pamela,Christchurch City,Fendalton Ward,-43.51142883300781,172.62551879882812,Private room,90,1,187,2025-10-01,1.77,2,289,27,October_2025
+16665527,"Stylish, charming, stay in our most chic suburb",110222955,Beverley Pamela,Christchurch City,Fendalton Ward,-43.51142883300781,172.62551879882813,Private room,90,1,187,2025-10-01,1.77,2,289,27,October_2025
 17628262,Double room with en suite and breakfast,96710780,Peter,Christchurch City,Innes Ward,-43.51461,172.65253,Private room,108,1,524,2025-10-04,5.13,3,111,92,October_2025
 1300965825517285e3,Beach Tranquility in Tikao Bay,179889874,Kaye,Christchurch City,Banks Peninsula Ward,-43.79532,172.91627,Entire home/apt,330,1,15,2025-09-30,1.46,1,315,15,October_2025
 801618124369631100,Bushside Cottage - Akaroa Holiday Home,145244100,Bachcare,Christchurch City,Banks Peninsula Ward,-43.7937507388,172.9687752153,Entire home/apt,266,2,10,2024-11-23,0.35,1547,364,2,October_2025
@@ -17963,7 +17963,7 @@ Long Term Bliss.",148604490,Leigh,Christchurch City,Spreydon Ward,-43.55613,172.
 1041553491428912500,House of Serenity.,547933078,Birendra,Christchurch City,Linwood Ward,-43.55012,172.6898,Private room,55,1,12,2025-02-25,0.55,2,269,2,October_2025
 1182139010390892500,Room in Christchurch,161190339,Jagat,Christchurch City,Burwood Ward,-43.4822748,172.6808431,Private room,45,1,4,2024-08-03,0.25,1,269,0,October_2025
 46713002,One Bedroom Family Apartment,127329302,Jay,Christchurch City,Riccarton Ward,-43.53137,172.58117,Entire home/apt,189,1,3,2023-09-08,0.06,6,344,0,October_2025
-11927990,Fabulous Reviews : Host of The Year Finalist 2022,16967897,Joan,Christchurch City,Riccarton Ward,-43.529441833496094,172.60879516601562,Entire home/apt,290,2,223,2024-03-05,1.93,2,129,0,October_2025
+11927990,Fabulous Reviews : Host of The Year Finalist 2022,16967897,Joan,Christchurch City,Riccarton Ward,-43.529441833496094,172.60879516601563,Entire home/apt,290,2,223,2024-03-05,1.93,2,129,0,October_2025
 20092239,Great Townhouse in Superb location,47808157,Wayne,Christchurch City,Fendalton Ward,-43.51605,172.62365,Entire home/apt,285,1,44,2024-10-03,0.45,3,294,0,October_2025
 1280757633294876700,#3 Timber House in New Brighton,136520408,Anny,Christchurch City,Coastal Ward,-43.50880430179557,172.7223306008745,Private room,38,1,12,2025-05-05,1.19,3,160,12,October_2025
 21315101,"Comfortable, Contemporary City Space",2185000,Jo,Christchurch City,Central Ward,-43.52336,172.63215,Entire home/apt,162,1,453,2025-09-23,4.74,5,194,53,October_2025

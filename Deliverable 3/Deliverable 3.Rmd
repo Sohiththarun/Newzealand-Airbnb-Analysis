@@ -1,0 +1,519 @@
+---
+title: "Data Wrangling - Python Workflow Converted to R"
+author: "Sohiththarun"
+output: html_document
+---
+
+## 1. Load and inspect the October 2025 dataset
+
+```{r}
+library(tidyverse)
+library(lubridate)
+
+df <- read_csv("October_2025.csv", show_col_types = FALSE)
+
+head(df)
+```
+
+```{r}
+head(df)
+```
+
+```{r}
+dim(df)
+```
+
+```{r}
+glimpse(df)
+```
+
+## 2. Filter Christchurch only
+
+```{r}
+christchurch <- df %>%
+  filter(neighbourhood_group == "Christchurch City")
+```
+
+```{r}
+head(christchurch)
+```
+
+## 3. Add month and year
+
+```{r}
+christchurch <- christchurch %>%
+  mutate(month_year = "October 2025")
+```
+
+```{r}
+count(christchurch, month_year)
+```
+
+## 4. Check missing values
+
+```{r}
+colSums(is.na(christchurch))
+```
+
+## 5. Check duplicates
+
+```{r}
+sum(duplicated(christchurch))
+```
+
+## 6. Check data types
+
+```{r}
+glimpse(christchurch)
+```
+
+## 7. Convert last_review to a date
+
+```{r}
+christchurch <- christchurch %>%
+  mutate(last_review = as.Date(last_review))
+```
+
+## 8. Repeat for all 9 datasets
+
+```{r}
+data_dir <- "C:/Users/sohit/Downloads/UC - MS(ADS)/DATA 422 (Data Wrangling)/Project/Newzealand-Airbnb-Analysis/DATA"
+files <- c(
+  "October 2025" = "October_2025.csv",
+  "November 2025" = "November_2025.csv",
+  "December 2025" = "December_2025.csv",
+  "January 2026" = "January_2026.csv",
+  "February 2026" = "February_2026.csv",
+  "March 2026" = "March_2026.csv",
+  "April 2026" = "April_2026.csv",
+  "May 2026" = "May_2026.csv",
+  "June 2026" = "June 2026.csv"
+)
+files <- setNames(file.path(data_dir, files), names(files))
+all_christchurch <- map2_dfr(
+  files,
+  names(files),
+  ~ read_csv(.x, show_col_types = FALSE) %>%
+    filter(neighbourhood_group == "Christchurch City") %>%
+    mutate(
+      month_year = .y,
+      last_review = as.Date(last_review)
+    )
+)
+```
+
+## 9. Concatenate the datasets
+
+The `map2_dfr()` step above reads and combines all nine datasets into one dataframe.
+
+```{r}
+christchurch_all <- all_christchurch
+
+dim(christchurch_all)
+```
+
+```{r}
+count(christchurch_all, month_year)
+```
+
+## 10. Check the final dataset
+
+```{r}
+head(christchurch_all)
+```
+
+```{r}
+tail(christchurch_all)
+```
+
+```{r}
+names(christchurch_all)
+```
+
+```{r}
+dim(christchurch_all)
+```
+
+```{r}
+count(christchurch_all, neighbourhood_group)
+```
+
+## 11. Check duplicates
+
+```{r}
+sum(duplicated(christchurch_all))
+```
+
+```{r}
+sum(duplicated(christchurch_all$id))
+```
+
+## 12. Summary statistics for numerical columns
+
+```{r}
+numeric_summary <- christchurch_all %>%
+  select(where(is.numeric)) %>%
+  summarise(
+    across(
+      everything(),
+      list(
+        count = ~ sum(!is.na(.)),
+        mean = ~ mean(., na.rm = TRUE),
+        sd = ~ sd(., na.rm = TRUE),
+        min = ~ min(., na.rm = TRUE),
+        median = ~ median(., na.rm = TRUE),
+        max = ~ max(., na.rm = TRUE)
+      )
+    )
+  )
+
+numeric_summary
+```
+
+## 13. Categorical variables and counts
+
+```{r}
+categorical_columns <- christchurch_all %>%
+  select(where(~ is.character(.))) %>%
+  names()
+
+categorical_columns
+```
+
+```{r}
+count(christchurch_all, room_type, sort = TRUE)
+```
+
+```{r}
+count(christchurch_all, neighbourhood, sort = TRUE)
+```
+
+```{r}
+count(christchurch_all, month_year, sort = FALSE)
+```
+
+## 14. General categorical summary
+
+```{r}
+categorical_summary <- map(
+  categorical_columns,
+  ~ christchurch_all %>%
+    count(.data[[.x]], sort = TRUE) %>%
+    slice_head(n = 20) %>%
+    mutate(variable = .x)
+)
+
+categorical_summary
+```
+
+## 15. Missing-value summary
+
+```{r}
+missing_summary <- tibble(
+  column = names(christchurch_all),
+  missing_count = map_int(
+    christchurch_all,
+    ~ sum(is.na(.))
+  ),
+  missing_percentage = map_dbl(
+    christchurch_all,
+    ~ round(mean(is.na(.)) * 100, 2)
+  )
+)
+
+missing_summary
+```
+
+## 16. Save the final concatenated dataset
+
+```{r}
+dir.create("output", showWarnings = FALSE, recursive = TRUE)
+
+write_csv(
+  christchurch_all,
+  "output/Christchurch_listings_Oct2025_Jun2026.csv"
+)
+```
+
+## 17. Save summary statistics
+
+```{r}
+write_csv(
+  numeric_summary,
+  "output/numerical_summary.csv"
+)
+```
+
+```{r}
+write_csv(
+  missing_summary,
+  "output/missing_values_summary.csv"
+)
+```
+
+## 18. Check columns
+
+```{r}
+names(christchurch_all)
+```
+
+## 19. Recreate the combined dataset for analysis
+
+```{r}
+data_dir <- "C:/Users/sohit/Downloads/UC - MS(ADS)/DATA 422 (Data Wrangling)/Project/Newzealand-Airbnb-Analysis/DATA"
+files <- file.path(data_dir, files)
+files <- c(
+  "October 2025" = "October_2025.csv",
+  "November 2025" = "November_2025.csv",
+  "December 2025" = "December_2025.csv",
+  "January 2026" = "January_2026.csv",
+  "February 2026" = "February_2026.csv",
+  "March 2026" = "March_2026.csv",
+  "April 2026" = "April_2026.csv",
+  "May 2026" = "May_2026.csv",
+  "June 2026" = "June 2026.csv"
+)
+files <- setNames(file.path(data_dir, files), names(files))
+
+df <- map2_dfr(
+  files,
+  names(files),
+  ~ read_csv(.x, show_col_types = FALSE) %>%
+    filter(neighbourhood_group == "Christchurch City") %>%
+    mutate(
+      month_year = .y,
+      month_year_date = case_when(
+        TRUE ~ as.Date(paste0(.y, "-01"), format = "%B %Y-%d")
+      )
+    )
+)
+```
+
+## 20. Check the combined data
+
+```{r}
+names(df)
+```
+
+```{r}
+count(df, month_year)
+```
+
+## 21. Average Airbnb price by month
+
+```{r}
+month_order <- c(
+  "October 2025",
+  "November 2025",
+  "December 2025",
+  "January 2026",
+  "February 2026",
+  "March 2026",
+  "April 2026",
+  "May 2026",
+  "June 2026"
+)
+
+df <- df %>%
+  mutate(
+    month_year = factor(
+      month_year,
+      levels = month_order,
+      ordered = TRUE
+    )
+  )
+
+monthly_price <- df %>%
+  group_by(month_year) %>%
+  summarise(
+    average_price = mean(price, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+ggplot(monthly_price, aes(x = month_year, y = average_price, group = 1)) +
+  geom_line() +
+  geom_point() +
+  labs(
+    x = "Month",
+    y = "Average Price (NZD)",
+    title = "Average Airbnb Price in Christchurch: October 2025 – June 2026"
+  ) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+## 22. Check month values
+
+```{r}
+head(df$month_year, 10)
+```
+
+## 23. Convert dates
+
+The original Python workflow attempts to convert `month_year_date` to a date. In R, this column is created explicitly from `month_year`.
+
+```{r}
+df <- df %>%
+  mutate(
+    month_year_date = as.Date(
+      paste0(
+        as.character(month_year),
+        " 01"
+      ),
+      format = "%B %Y %d"
+    ),
+    last_review = as.Date(last_review)
+  )
+```
+
+```{r}
+class(df$month_year_date)
+class(df$last_review)
+```
+
+## 24. Calculate days since latest review
+
+```{r}
+df <- df %>%
+  mutate(
+    days_since_latest_review =
+      as.numeric(month_year_date - last_review)
+  )
+```
+
+```{r}
+df %>%
+  select(
+    month_year_date,
+    last_review,
+    days_since_latest_review
+  ) %>%
+  head(20)
+```
+
+## 25. Histogram of days since latest review
+
+```{r}
+ggplot(
+  df %>% filter(!is.na(days_since_latest_review)),
+  aes(x = days_since_latest_review)
+) +
+  geom_histogram(bins = 50) +
+  labs(
+    x = "Days Since Latest Review",
+    y = "Number of Listings",
+    title = "Distribution of Days Since Latest Review"
+  ) +
+  theme_minimal()
+```
+
+## 26. Boxplot of days since latest review
+
+```{r}
+ggplot(
+  df %>% filter(!is.na(days_since_latest_review)),
+  aes(y = days_since_latest_review)
+) +
+  geom_boxplot() +
+  labs(
+    y = "Days Since Latest Review",
+    title = "Boxplot of Days Since Latest Review"
+  ) +
+  theme_minimal()
+```
+
+## 27. Christchurch Airbnb price distribution
+
+Only prices up to NZD 1,000 are included, matching the original Python analysis.
+
+```{r}
+df %>%
+  filter(!is.na(price), price <= 1000) %>%
+  ggplot(aes(x = price)) +
+  geom_histogram(bins = 30) +
+  labs(
+    x = "Price (NZD)",
+    y = "Frequency",
+    title = "Christchurch Airbnb Price Distribution (Prices ≤ $1000)"
+  ) +
+  theme_minimal()
+```
+
+## 28. Publication date
+
+The original Python code only assigns a publication date to October 2025. The same logic is reproduced here.
+
+```{r}
+df <- df %>%
+  mutate(
+    publication_date = case_when(
+      as.character(month_year) == "October 2025" ~ as.Date("2025-10-05"),
+      TRUE ~ as.Date(NA)
+    )
+  )
+```
+
+## 29. Recalculate days since latest review using publication date
+
+```{r}
+df <- df %>%
+  mutate(
+    days_since_latest_review =
+      as.numeric(publication_date - last_review)
+  )
+```
+
+```{r}
+df %>%
+  select(
+    publication_date,
+    last_review,
+    days_since_latest_review
+  ) %>%
+  head(20)
+```
+
+## 30. Average days since latest review
+
+```{r}
+average_days <- mean(
+  df$days_since_latest_review,
+  na.rm = TRUE
+)
+
+print(
+  paste(
+    "Average days since latest review:",
+    round(average_days, 2)
+  )
+)
+```
+
+## 31. Histogram of review age
+
+```{r}
+review_days <- df$days_since_latest_review %>%
+  na.omit()
+
+bins <- c(
+  0, 50, 100, 150, 200, 250, 300, 350,
+  400, 450, 500, 550, 600, 650, 700,
+  750, 800, 850, 900, 950, 1000
+)
+
+ggplot(
+  tibble(review_days = review_days),
+  aes(x = review_days)
+) +
+  geom_histogram(
+    breaks = bins
+  ) +
+  scale_x_continuous(breaks = bins) +
+  labs(
+    x = "Days Since Latest Review",
+    y = "Number of Properties",
+    title = "Days Since Latest Review - Christchurch Airbnb Properties (October 2025)"
+  ) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
