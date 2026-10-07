@@ -2,3 +2,12 @@
 Deliverable 7/Data/Raw/*.csv
 Deliverable 7/Output/*.csv
 Deliverable 7/Output/*.png
+# Raw Airbnb data
+Data/Raw/
+
+# Generated combined dataset
+Output/Christchurch_listings_Oct2025_Aug2026_clean.csv
+
+# RStudio project files
+*.Rproj
+.Rproj.user/
