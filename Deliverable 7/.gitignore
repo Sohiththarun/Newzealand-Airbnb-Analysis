@@ -1,0 +1,4 @@
+# Deliverable 7 raw Airbnb data are kept locally and should not be pushed to GitHub
+Deliverable 7/Data/Raw/*.csv
+Deliverable 7/Output/*.csv
+Deliverable 7/Output/*.png
