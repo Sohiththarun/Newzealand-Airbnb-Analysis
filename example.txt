@@ -1,5 +1,0 @@
-import pandas as pd
-
-df = pd.read_csv("Oct2025/listings.csv")
-
-df.head()
